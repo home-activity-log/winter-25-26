@@ -76,4 +76,5 @@ elRestart.onclick = () => {
 };
 
 render();
-    
+
+alert("quiz.js loaded");
