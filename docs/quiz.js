@@ -96,7 +96,8 @@ function next() {
 
   // いまの周回が終わった
   if (reviewQueue.length === 0) {
-    elFeedback.textContent = "全問クリア！🎉（最初から を押すとやり直せます）";
+    elFeedback.textContent = "全問クリア！🎉（RESTART を押すとやり直せます）";
+    fireConfettiFullScreen();
     elNext.disabled = true;
     return;
   }
