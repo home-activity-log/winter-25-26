@@ -1,0 +1,13 @@
+body { font-family: system-ui, sans-serif; margin: 0; padding: 18px; }
+.wrap { max-width: 720px; margin: 0 auto; }
+.card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; }
+.meta { display: flex; justify-content: space-between; font-siza: 14px; opacity: .75; }
+.q { font-size: 20px; margin: 14px 0; }
+.choices { display: grid; gap: 10px; }
+.choice { padding: 12px; border-radius: 10px; border: 1px solid #ccc; background: #fff; text-align: left; }
+.choice[data-correct="1"] { border-color: #2e7d32; }
+.choice[data=wrong="1"] { border-color: #c62828; opacity: .9; }
+.feedback { min-height: 1.5em; margin: 12px 0 6px; font-weight: 600; }
+.actions { display: flex; gap:10px; }
+button { cursor: pointer; }
+.sub { opacity: .8; }
