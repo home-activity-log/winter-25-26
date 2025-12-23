@@ -94,6 +94,22 @@ function next() {
     return;
   }
 
+    function fireConfettiFullScreen(){
+      const duration = 1500;
+      const end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 6,
+          spread: 120,
+          startVelocity: 45,
+          ticks: 220,
+          origin: { x: Math.random(), y: Math.random() * 0.3 }
+        });
+        if (Date.now() < end) requestAnimationFrame(frame);
+      })();
+    }
+      
   // いまの周回が終わった
   if (reviewQueue.length === 0) {
     elFeedback.textContent = "全問クリア！🎉（RESTART を押すとやり直せます）";
