@@ -1,11 +1,11 @@
 const QUIZ = [
-  { q: "sealの意味は？", choices: ["アザラシ","リス","ウマ","イルカ"], a:0 },
-  { q: "時間を「はかる」の漢字は？", choices: ["図る", "計る", "測る", "量る"], a: 1 },
-  { q: "２を１０個かけ合わせた数は？", choices: ["1024", "1048", "20", "200"], a:0 },
+  { q: "りんごの英語は？", choices: ["apple","banana","grape","peach"], a: 0 },
+  { q: "I am hungry. の意味は？", choices: ["ねむい","おなかがすいた","うれしい","かなしい"], a: 1 },
+  { q: "library の意味は？", choices: ["図書館","病院","駅","公園"], a: 0 },
 ];
 
 let i = 0;
-let score =0;
+let score = 0;
 let locked = false;
 
 const elQ = document.getElementById("question");
@@ -22,14 +22,9 @@ function render() {
   elFeedback.textContent = "";
   elChoices.innerHTML = "";
 
-const item = QUIZ[i];
-elQ.textContent = item.q;
-elProgress.textContent = "";
-elChoices.innerHTML = "";
-
-const item = QUIZ[i];
+  const item = QUIZ[i];
   elQ.textContent = item.q;
-  elProgress.textContent = `Question ${i + 1} / &{QUIZ.length}`;
+  elProgress.textContent = `Question ${i + 1} / ${QUIZ.length}`;
   elScore.textContent = `Score ${score}`;
 
   item.choices.forEach((text, idx) => {
@@ -48,7 +43,7 @@ function answer(idx) {
   const item = QUIZ[i];
   const buttons = [...document.querySelectorAll(".choice")];
 
-  buttons.forEach((b,k) => {
+  buttons.forEach((b, k) => {
     if (k === item.a) b.dataset.correct = "1";
     b.disabled = true;
   });
@@ -65,16 +60,15 @@ function answer(idx) {
   elNext.disabled = false;
 }
 
-elNext.oonclick = () => {
+elNext.onclick = () => {
   i = (i + 1) % QUIZ.length;
   render();
 };
 
 elRestart.onclick = () => {
-  i = (i + 1) % QUIZ.length;
+  i = 0;
+  score = 0;
   render();
 };
 
 render();
-
-alert("quiz.js loaded");
