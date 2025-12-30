@@ -65,4 +65,8 @@
 ### 12/30
 - プリント：+3（計12ページ）
 > 🧺ポットのクエン酸洗浄
-> 🍳そば打ち[![そば打ち](assets/images/IMG_2062.jpeg)](assets/images/IMG_2062.jpeg)
+> 
+> 🍳そば打ち
+> <a href="assets/images/IMG_2062.jpeg">
+<img src="assets/images/IMG_2062.jpeg" width="120">
+</a>
