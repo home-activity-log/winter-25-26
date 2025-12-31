@@ -70,3 +70,9 @@
 > <a href="assets/images/IMG_2062.jpeg">
 <img src="assets/images/IMG_2062.jpeg" width="120">
 </a>
+
+
+### 12/31
+- プリント：+3（計15ページ）
+
+> 🏃‍♂️剣道
